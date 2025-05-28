@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/2_character_pepe/2_walk/W-24.png" type="image/icon type">
+    <title>El Pollo Loco</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="Models/drawable-object.class.js" defer></script>
+    <script src="Models/moveble-object.class.js" defer></script>
+    <script src="Models/character.class.js" defer></script>
+    <script src="Models/chicken.class.js" defer></script>
+    <script src="Models/small-chicken.class.js" defer></script>
+    <script src="Models/collectable-bottle-left.js" defer></script>
+    <script src="Models/collectable-bottle-right.js" defer></script>
+    <script src="Models/collectable-coin.js" defer></script>
+    <script src="Models/status-bar-health.class.js" defer></script>
+    <script src="Models/status-bar-bottle.js" defer></script>
+    <script src="Models/status-bar-coin.js" defer></script>
+    <script src="Models/status-bar-endboss.js" defer></script>
+    <script src="Models/mute-unmute.class.js" defer></script>
+    <script src="Models/cloud.class.js" defer></script>
+    <script src="Models/background.class.js" defer></script>
+    <script src="Models/keyboard.class.js" defer></script>
+    <script src="Models/level.class.js" defer></script>
+    <script src="Models/throwable-object.class.js" defer></script>
+    <script src="Models/endboss.class.js" defer></script>
+    <script src="Models/levels/level1.js" defer></script>
+    <script src="./JavaScript/game.js" defer></script>
+    <script src="Models/world.class.js" defer></script>
+</head>
+<body>
+
+    <h1 class="display-none">El Pollo Loco</h1>
+    
+    <div id="gameContainer">
+        <canvas id="canvas" width="720" height="480" style="display: none;"></canvas>
+        <div class="button-setup" id="mobileButtons">
+            <div class="left-right-button">
+                <button class="game-button" id="leftButton"> < </button>
+                <button class="game-button" id="rightButton"> > </button>
+            </div>
+            <div class="jump-throw-button">
+                <button class="game-button" id="jumpButton"> ^ </button>
+                <button class="game-button" id="throwButton"> D </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="rotateDeviceScreen" class="rotate-device-screen">
+        <h2>Please rotate your device to landscape mode to play!</h2>
+    </div>
+    
+    <div id="startScreen" class="start-screen">
+        <div class="button-set-up">
+            <div class="column">
+                <button id="startButton">Start Game</button>
+                <button id="howToPlayButton">How To Play</button>
+            </div>
+            <div class="impressum">
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="howToPlayScreen" class="how-to-play-screen">
+        <div class="button-set-up">
+            <button id="backButton">Back</button>
+        </div>
+
+        <div class="howTo "> 
+            <b>Press > To move Right</b> 
+            <b>Press < To move Left</b> 
+            <b>Press Space To Jump</b> 
+            <b>Press D to throw bottles</b> 
+            <b>Kepp the bottles to defeat the edboss</b>
+        </div>
+
+    </div>
+
+    <div id="winScreen" class="win-screen" style="display: none;">
+        <div class="center-screen">
+            <h2 class="win-txt">YOU WIN!</h2>
+            <button onclick="restartGame()">Restart</button>
+            <button onclick="location.reload()">Back to start menu</button>
+        </div>
+    </div>
+
+    <div id="gameOverScreen" style="display: none;">
+        <div class="center-screen">
+            <h2 class="win-over-txt">Game Over</h2>
+            <button onclick="restartGame()">Restart</button>
+            <button onclick="location.reload()">Back to start menu</button>
+        </div>
+    </div>
+
+</body>
+</html>

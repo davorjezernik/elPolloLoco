@@ -1,0 +1,346 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-image: url('../img/background.png'); 
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    min-height: 100vh; 
+}
+
+@font-face {
+    font-family: 'zabras';
+    src: url('../fonts/zabras.ttf');
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 4px 4px 4px 4px rgba(0,0,0,0,0.5);
+}
+
+#gameContainer {
+    position: relative; 
+    width: 100%; 
+    max-width: 720px; 
+    height: 480px; 
+    margin: 0 auto; 
+}
+
+#canvas {
+    background-color: white;
+    border: 2px solid black;
+    display: block;
+    width: 100%; 
+    height: 100%; 
+}
+
+.button-setup {
+    position: absolute; 
+    bottom: 20px; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+.left-right-button,
+.jump-throw-button {
+    display: flex;
+    gap: 10px; 
+}
+
+.left-right-button img,
+.jump-throw-button img {
+    width: 50px; 
+    height: 50px; 
+}
+
+#startScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    color: white;
+    text-align: center;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+}
+
+.start-screen {
+    background-image: url('../img/9_intro_outro_screens/start/startscreen_1.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    height: 100%; 
+    width: 100%; 
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-set-up {
+    display: flex; 
+    gap: 8px; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: auto; 
+    padding-top: 8px;
+    flex-direction: column;
+}
+
+.how-to-play-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    height: 480px;
+    background-image: url('../img/5_background/second_half_background.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.center-screen {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+b {
+    color: black;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-top: 16px;
+}
+
+.howTo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 64px;
+}
+
+#gameOverScreen,
+#winScreen {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    color: white;
+    text-align: center;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000; 
+}
+
+#gameOverScreen h2,
+#winScreen h2 {
+    font-size: 64px; 
+    margin: 0; 
+}
+
+#gameOverScreen button,
+#winScreen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; 
+}
+
+#gameOverScreen button:hover,
+#winScreen button:hover {
+    background-color: #e64a2e; 
+}
+
+.win-over-txt {
+    font-size: 64px;
+}
+
+#mobileButtons {
+    display: none;
+}
+
+.rotate-device-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000; 
+    letter-spacing: 8px;
+}
+
+.rotate-device-screen h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.rotate-device-screen p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+body.no-scroll {
+    overflow-y: hidden;
+}
+
+#rotateDeviceScreen {
+    display: none;
+}
+
+.impressum {
+    color: black;
+    font-family: auto;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.game-button {
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 990px) {
+    #mobileButtons {
+        display: flex;
+    }
+
+    #gameContainer {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #startScreen,
+    #howToPlayScreen {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    button {
+        margin-top: 1px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rotate-device-screen {
+        display: flex; 
+    }
+    button {
+        margin-top: 1px;
+    }
+}
+
+@media only screen and (max-height: 541px) {
+    .button-set-up {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    #canvas {
+        height: 100vh;
+    }
+
+    #startScreen,
+    #howToPlayScreen {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    .button-setup {
+        bottom: 50px;
+    }
+}
+
+@media only screen and (max-height: 539px) {
+    .button-set-up {
+        margin-top: 1px;
+    }
+}
+
+@media only screen and (max-height: 399px) {
+    .button-setup {
+        bottom: 20px;
+    }
+}
+
+@media only screen and (max-height: 391px) {
+    .button-setup {
+        bottom: 50px;
+    }
+}
+
+@media only screen and (max-height: 381px) {
+    .button-setup {
+        bottom: 20px;
+    }
+}
