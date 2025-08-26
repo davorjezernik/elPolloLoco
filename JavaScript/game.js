@@ -279,3 +279,12 @@ checkOrientation();
 window.addEventListener('resize', checkOrientation);
 window.addEventListener('orientationchange', checkOrientation);
 
+/**
+ * Prevent context menu on mobile buttons
+ */
+document.querySelectorAll('#leftButton, #rightButton, #jumpButton, #throwButton').forEach(button => {
+    button.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+});
+

@@ -246,7 +246,7 @@ class World {
         bottle.explodeBottle = true;
         if (!this.isMuted) bottle.playCrackingSound();      
         enemy.hit();
-        if (enemy instanceof Chicken) {
+        if (enemy instanceof Chicken || enemy instanceof smallChicken) {
             this.removeChickenAfterDeath(enemy);
         } else if (enemy instanceof EndBoss) {
             this.handleEndBossHit(enemy);
