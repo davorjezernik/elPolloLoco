@@ -12,13 +12,15 @@ cd elPolloLoco
 Open the project folder in VS Code (or any editor).
 Right-click on index.html and select “Open with Live Server”.
 
+
 ### 3. How to Play
-Once the game starts:
-Click the “How To Play” button to view the key bindings and controls.
-Enjoy playing! 🎮
+#Once the game starts:
+#Click the “How To Play” button to view the key bindings and controls.
+#Enjoy playing! 🎮
 
 
 
 
 Notes:
 No installation required — runs completely in the browser.
+
